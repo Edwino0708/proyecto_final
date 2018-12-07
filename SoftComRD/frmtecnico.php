@@ -68,7 +68,59 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-primary" style="margin-left:600px">Crear nuevo mantenimiento</button>
+      <button type="button" onclick="nuevoform();" class="btn btn-primary" style="margin-left:600px">Crear nuevo mantenimiento</button>
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Nuevo Mantenimiento</h4>
+            </div>
+            <form role="form"  id= "frmpaciente" name="frmpaciente" onsubmit="Registrarmantenimiento(); return false">
+              <div class="col-lg-12">               
+
+               <div class="form-group">
+                  <label>Fecha Aplicacion</label>
+                  <input  name="fecha_aplicacion" class="form-control" required>
+                </div>
+                
+                 <div class="form-group">
+                  <label>Tipo de mantenimiento</label>
+                  <input  name="tipo_mantenimiento" class="form-control" required>
+                </div>
+                 
+                <div class="form-group">
+                  <label>Cantidad de mantenimiento</label>
+                  <input  name="cantidad_mantenimiento" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Nombre del dispositivo</label>
+                  <input  name="nombre_dispositivo" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Precio del mantenimiento</label>
+                  <input  name="precio_mantenimiento" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Tecnico Responsable</label>
+                  <input  name="responsable" class="form-control" required>
+                </div>
+                              
+                
+                <button type="submit" class="btn btn-primary btn-lg" button='agregar'>
+                  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Agregar mantenimentos
+                </button>
+              </div>
+            </form>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+    
 <!--//////////////////////////////////////////////////-->
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -76,6 +128,11 @@
 <script type="text/javascript">        
 	function cambiar(){
           $('#modal2').modal('show');
+
+        }
+
+        function nuevoform(){
+          $('#modal').modal('show');
 
         }
     </script>
