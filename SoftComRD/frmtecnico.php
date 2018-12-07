@@ -67,6 +67,8 @@
           </div>
         </div>
       </div>
+
+      <button type="button" class="btn btn-primary" style="margin-left:600px">Crear nuevo mantenimiento</button>
 <!--//////////////////////////////////////////////////-->
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
